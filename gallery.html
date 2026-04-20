@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Valley Nursery - Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="images/logo-canopy-green.png" alt="Bloom Valley Nursery Logo" width="150">
+        <h1>Bloom Valley Nursery</h1>
+        <button id="viewCart" onclick="viewCart()">View Shopping Cart (0)</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Products</h2>
+        <p>Browse our selection of quality plants, trees, and gardening supplies.</p>
+        
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Row 1 -->
+                <tr>
+                    <td><img src="images/apple-tree.jpg" alt="Apple Tree"></td>
+                    <td>Apple Tree</td>
+                    <td>Healthy apple tree, perfect for home orchards</td>
+                    <td>$49.99</td>
+                    <td><button class="add-to-cart" data-name="Apple Tree" data-price="49.99">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/birch-tree.jpg" alt="Birch Tree"></td>
+                    <td>Birch Tree</td>
+                    <td>Elegant white birch tree for landscaping</td>
+                    <td>$59.99</td>
+                    <td><button class="add-to-cart" data-name="Birch Tree" data-price="59.99">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/maple-tree.jpg" alt="Maple Tree"></td>
+                    <td>Maple Tree</td>
+                    <td>Beautiful Japanese maple, great fall colors</td>
+                    <td>$69.99</td>
+                    <td><button class="add-to-cart" data-name="Maple Tree" data-price="69.99">Add to Cart</button></td>
+                </tr>
+                <!-- Row 2 -->
+                <tr>
+                    <td><img src="images/aloe-vera.jpg" alt="Aloe Vera"></td>
+                    <td>Aloe Vera Plant</td>
+                    <td>Low-maintenance succulent, great for beginners</td>
+                    <td>$12.99</td>
+                    <td><button class="add-to-cart" data-name="Aloe Vera Plant" data-price="12.99">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/spider-plant.jpg" alt="Spider Plant"></td>
+                    <td>Spider Plant</td>
+                    <td>Air-purifying plant, pet-friendly</td>
+                    <td>$15.99</td>
+                    <td><button class="add-to-cart" data-name="Spider Plant" data-price="15.99">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/string-of-pearls.jpg" alt="String of Pearls"></td>
+                    <td>String of Pearls</td>
+                    <td>Unique trailing succulent</td>
+                    <td>$18.99</td>
+                    <td><button class="add-to-cart" data-name="String of Pearls" data-price="18.99">Add to Cart</button></td>
+                </tr>
+                <!-- Row 3 -->
+                <tr>
+                    <td><img src="images/birdhouse.jpg" alt="Birdhouse"></td>
+                    <td>Birdhouse</td>
+                    <td>Handcrafted wooden birdhouse</td>
+                    <td>$34.99</td>
+                    <td><button class="add-to-cart" data-name="Birdhouse" data-price="34.99">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/potting-soil.jpg" alt="Potting Soil"></td>
+                    <td>Potting Soil</td>
+                    <td>Premium organic potting mix, 20lb bag</td>
+                    <td>$9.99</td>
+                    <td><button class="add-to-cart" data-name="Potting Soil" data-price="9.99">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/watering-can.jpg" alt="Watering Can"></td>
+                    <td>Watering Can</td>
+                    <td>Classic metal watering can, 2 gallon</td>
+                    <td>$24.99</td>
+                    <td><button class="add-to-cart" data-name="Watering Can" data-price="24.99">Add to Cart</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cartItems">
+                <p>Your cart is empty.</p>
+            </div>
+            <div class="cart-buttons">
+                <button id="clearCart" onclick="clearCart()">Clear Cart</button>
+                <button id="processOrder" onclick="processOrder()">Process Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <section id="newsletter">
+            <h4>Subscribe to Our Newsletter</h4>
+            <form onsubmit="alert('Thank you for subscribing!'); return false;">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <section id="social">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 Bloom Valley Nursery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
